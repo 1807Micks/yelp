@@ -10,13 +10,6 @@
                         <img src="<%= img.url%>" class="d-block w-100" alt="" crossorigin>
                     </div>
                     <% }) %> 
-                    <%if(campground.images.length) {%>
-                        <img class="img-fluid" alt="" src="<%=campground.images[0].url%>" crossorigin>
-                        <% }else {%>
-                        <img class="img-fluid" alt=""
-                            src="https://res.cloudinary.com/dncsbrqkj/image/upload/v1675585725/YelpCamp/a8429b6akannndt5s5nw.jpg"
-                            crossorigin>
-                        <% } %>
             </div>
             <% if(campground.images.length > 1) {%>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
