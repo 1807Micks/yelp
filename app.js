@@ -81,6 +81,7 @@ const scriptSrcUrls = [
     "https://kit.fontawesome.com",
     "https://cdnjs.cloudflare.com",
     "https://cdn.jsdelivr.net",
+    "https://res.cloudinary.com/dncsbrqkj"
 ];
 const styleSrcUrls = [
     "https://kit-free.fontawesome.com",
@@ -90,6 +91,7 @@ const styleSrcUrls = [
     "https://api.tiles.mapbox.com",
     "https://fonts.googleapis.com",
     "https://use.fontawesome.com",
+    "https://res.cloudinary.com/dncsbrqkj"
 ];
 const connectSrcUrls = [
     "https://api.mapbox.com",
@@ -111,11 +113,11 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://res.cloudinary.com", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com",
             ],
             fontSrc    : [ "'self'", ...fontSrcUrls ],
-            mediaSrc   : [ "https://res.cloudinary.com/dncsbrqkj/" ],
+            mediaSrc   : [ "https://res.cloudinary.com" ],
             childSrc   : [ "blob:" ]
         },
     })
