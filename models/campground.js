@@ -10,10 +10,6 @@ const ImageSchema = new Schema({
     filename: String
 });
 
-ImageSchema.virtual('thumbnail').get(function () {
-    return this.url.replace('/upload', '/upload/w_200');
-});
-
 const opts = { toJSON: { virtuals: true } };
 
 const CampgroundSchema = new Schema({
@@ -52,7 +48,9 @@ CampgroundSchema.virtual('properties.popUpMarkup').get(function () {
     <p>${this.description.substring(0, 20)}...</p>`
 });
 
-
+CampgroundSchema.path('images').schema.virtual('thumbnail').get(function() {
+    return this.url.replace('/upload/', '/upload/w_200/');
+});
 
 CampgroundSchema.post('findOneAndDelete', async function (doc) {
     if (doc) {
