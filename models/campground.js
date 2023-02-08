@@ -44,7 +44,8 @@ const CampgroundSchema = new Schema({
 
 CampgroundSchema.virtual('properties.popUpMarkup').get(function () {
     return `
-    <strong><a id="cluster-map" href="/campgrounds/${this._id}">${this.title}</a><strong>`
+    <strong><a id="cluster-map" href="/campgrounds/${this._id}">${this.title}</a><strong>
+    <p id="cluster-map2>${this.location.substring(0, 20)}...</p>`
 });
 
 CampgroundSchema.path('images').schema.virtual('thumbnail').get(function() {
