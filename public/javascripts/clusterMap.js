@@ -36,14 +36,14 @@ map.on('load', function () {
             //   * Blue, 20px circles when point count is less than 100
             //   * Yellow, 30px circles when point count is between 100 and 750
             //   * Pink, 40px circles when point count is greater than or equal to 750
-            'circle-color': [
+               'circle-color': [
                 'step',
                 ['get', 'point_count'],
-                '#00BCD4',
+                '#8f2d56',
                 10,
-                '#2196F3',
+                '#d81159',
                 30,
-                '#3F51B5'
+                '#e05780'
             ],
             'circle-radius': [
                 'step',
@@ -75,7 +75,7 @@ map.on('load', function () {
         source: 'campgrounds',
         filter: ['!', ['has', 'point_count']],
         paint: {
-            'circle-color': '#11b4da',
+            'circle-color': '#8f2d56',
             'circle-radius': 4,
             'circle-stroke-width': 1,
             'circle-stroke-color': '#fff'
