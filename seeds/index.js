@@ -3,9 +3,8 @@ const cities = require('./cities');
 const { places, descriptors } = require('./seedHelpers');
 const Campground = require('../models/campground');
 
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
 mongoose.set('strictQuery', false);
-mongoose.connect(dbUrl);
+mongoose.connect('mongodb+srv://yelpcamp:yelpcamp2023@cluster0.eplsmqo.mongodb.net/?retryWrites=true&w=majority');
 
 const db = mongoose.connection;
 
