@@ -49,7 +49,7 @@ CampgroundSchema.virtual('properties.popUpMarkup').get(function () {
 });
 
 CampgroundSchema.path('images').schema.virtual('thumbnail').get(function() {
-    return this.url.replace('/upload/', '/upload/w_200/');
+    return this.url.replace('/upload/', '/upload/w_150/');
 });
 
 CampgroundSchema.post('findOneAndDelete', async function (doc) {
